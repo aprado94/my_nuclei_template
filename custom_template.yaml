@@ -1,0 +1,18 @@
+id: simple-custom-template
+
+info:
+  name: Test HTTP Template
+  author: Adriana Prado Alonso
+  severity: high
+  description: Basic custom template for security automation
+  reference: https://www.acunetix.com/vulnerabilities/web/git-repository-found/
+  tags: example,custom
+
+  http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    matchers:
+      - type: word
+        words:
+          - "This is test matcher text"
